@@ -9,6 +9,13 @@ class PostDetail extends Component {
     event.preventDefault()
     alert('click')
     console.log(this.props)
+    console.log(this.props.post.id)
+    console.log(this.props.post.content)
+    const { dataCallBack } = this.props
+    console.log(dataCallBack)
+    if (dataCallBack !== undefined) {
+      dataCallBack('hello wordl', this.props)
+    }
   }
 
   render () {
